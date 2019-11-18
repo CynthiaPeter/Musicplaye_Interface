@@ -27,7 +27,7 @@ class _MusicPageState extends State<MusicPage> {
           brightness: Brightness.dark,
           elevation: 0,
         ),
-        backgroundColor: Colors.deepOrange[600],
+        backgroundColor: Colors.deepOrange[700],
         body: Container(
           child: Stack(
             children: <Widget>[
@@ -39,6 +39,15 @@ class _MusicPageState extends State<MusicPage> {
                   width: 415.0,
                   height: 500.0,
                   decoration: BoxDecoration(
+                      //for boxshadow
+                      boxShadow: [
+                        BoxShadow(
+                          offset: Offset(0, 35),
+                          spreadRadius: -18,
+                          color: Colors.black.withOpacity(0.18),
+                          blurRadius: 23,
+                        )
+                      ],
                       color: Colors.white,
                       borderRadius: BorderRadius.only(
                           bottomLeft: Radius.circular(70.0),
@@ -47,19 +56,24 @@ class _MusicPageState extends State<MusicPage> {
                   alignment: Alignment.center,
                   child: Container(
                     decoration: BoxDecoration(
-                      borderRadius: BorderRadius.all(Radius.circular(20.0)),
+                      //borderRadius: BorderRadius.all(Radius.circular(20.0)),
                       color: Colors.redAccent,
+                      boxShadow: [
+                        new BoxShadow(
+                          offset: Offset(0, 35),
+                          spreadRadius: -10,
+                          color: Colors.black.withOpacity(0.24),
+                          blurRadius: 23,
+                        ),
+                      ],
                     ),
-                    margin: EdgeInsets.only(bottom: 200),
-                    //decoration: BoxDecoration(
-                    // borderRadius: BorderRadius.all(Radius.circular(3)),
-                    // ),
+                    margin: EdgeInsets.only(bottom: 220, top: 30),
                     child: Column(
                       children: <Widget>[
                         Image.asset(
                           'images/bellion.jpg',
-                          width: 300,
-                          height: 300,
+                          width: 250,
+                          height: 250,
                           fit: BoxFit.cover,
                         )
                       ],
